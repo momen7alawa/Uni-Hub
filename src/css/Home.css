@@ -1,0 +1,654 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+ .home-page {
+   background-color: #020617;
+   color: #f9fafb;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+     sans-serif;
+ }
+
+
+
+ .home-hero {
+   min-height: 100vh;
+   padding: 80px 8vw 60px;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 40px;
+   color: #ffffff;
+
+   background:
+     linear-gradient(90deg,
+       #05070a 0%,
+       rgba(5, 7, 10, 0.96) 40%,
+       rgba(5, 7, 10, 0.85) 60%,
+       rgba(5, 7, 10, 0.7) 100%),
+     url("../img/ChatGPT Image Nov 24, 2025, 10_42_27 PM.png") right center / cover no-repeat;
+ }
+
+ .home-hero-inner {
+   max-width: 520px;
+ }
+
+ .home-hero-tagline {
+   font-size: 18px;
+   margin-bottom: 6px;
+   color: #a3a3a3;
+ }
+
+ .home-hero-title {
+   font-size: 56px;
+   font-weight: 700;
+   line-height: 1.05;
+   margin: 0 0 18px;
+ }
+
+ .home-hero-description {
+   font-size: 15px;
+   line-height: 1.7;
+   max-width: 420px;
+   color: #d1d5db;
+   margin: 0 0 24px;
+ }
+
+ .home-hero-actions {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+ }
+
+ .home-hero-btn {
+   border-radius: 999px;
+   border: none;
+   cursor: pointer;
+   padding: 14px 32px;
+   font-size: 16px;
+   font-weight: 500;
+   background-color: #ffffff;
+   color: #000000;
+   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+   transition: transform 0.15s ease, box-shadow 0.15s ease,
+     background-color 0.15s ease, color 0.15s ease;
+ }
+
+ .home-hero-btn:hover {
+   transform: translateY(-1px);
+   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+ }
+
+
+
+ .home-feature-strip {
+   margin-top: 20px;
+   background: linear-gradient(90deg, #14171c, #222833);
+   border-radius: 16px;
+   padding: 20px 40px;
+   display: flex;
+   gap: 32px;
+   align-items: center;
+   justify-content: space-between;
+   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
+ }
+
+ .home-feature-item {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+   flex: 1;
+   min-width: 0;
+ }
+
+ .home-feature-icon {
+   width: 40px;
+   height: 40px;
+   border-radius: 999px;
+   border: 1px solid rgba(255, 255, 255, 0.25);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .home-feature-icon i {
+   font-size: 20px;
+ }
+
+ .home-feature-title {
+   font-size: 15px;
+   font-weight: 600;
+   margin: 0 0 4px;
+ }
+
+ .home-feature-text {
+   font-size: 13px;
+   color: #c0c0c0;
+   margin: 0;
+ }
+
+
+
+ .home-about {
+   padding: 70px 8vw 90px;
+   background-color: #020617;
+ }
+
+ .home-about-inner {
+   max-width: 1200px;
+   margin: 0 auto;
+   border-radius: 32px;
+   padding: 56px 64px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 40px;
+
+   background: linear-gradient(120deg,
+       #111827 0%,
+       #1e293b 45%,
+       #4f46e5 100%);
+   color: #ffffff;
+   box-shadow: 0 30px 70px rgba(15, 23, 42, 0.85);
+ }
+
+ .home-about-text {
+   flex: 1.1;
+   max-width: 520px;
+ }
+
+ .home-about-tagline {
+   font-size: 15px;
+   text-transform: uppercase;
+   letter-spacing: 0.14em;
+   color: #a5b4fc;
+   margin-bottom: 10px;
+ }
+
+ .home-about-title {
+   font-size: 38px;
+   line-height: 1.15;
+   font-weight: 800;
+   margin: 0 0 16px;
+ }
+
+ .home-about-description {
+   font-size: 15px;
+   line-height: 1.7;
+   color: #e5e7eb;
+   margin: 0 0 20px;
+ }
+
+ .home-about-list {
+   list-style: none;
+   padding: 0;
+   margin: 0 0 24px;
+   font-size: 14px;
+ }
+
+ .home-about-list li {
+   display: flex;
+   align-items: flex-start;
+   gap: 10px;
+   margin-bottom: 10px;
+   color: #e5e7eb;
+ }
+
+ .home-about-list i {
+   font-size: 16px;
+   margin-top: 2px;
+   color: #22c55e;
+ }
+
+ .home-about-list span {
+   line-height: 1.6;
+ }
+
+  .home-about-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 12px 26px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #facc15;
+    color: #022c22 !important;  /* اللون الأساسي أسود */
+    box-shadow: 0 18px 40px rgba(250, 204, 21, 0.55);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    /* لاحظي: حذفت transition على color */
+}
+
+.home-about-btn:hover {
+   transform: translateY(-1px);
+   background-color: #eab308;
+   box-shadow: 0 22px 48px rgba(250, 204, 21, 0.7);
+   color: #022c22 !important;  /* اللون أسود ثابت */
+}
+
+ .home-about-image {
+   flex: 0.9;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .home-about-circle {
+   position: absolute;
+   width: 320px;
+   height: 320px;
+   border-radius: 999px;
+   background: radial-gradient(circle at center, #4f46e5 0%, #020617 60%);
+   opacity: 0.95;
+ }
+
+ .home-about-img {
+   position: relative;
+   max-height: 360px;
+   width: auto;
+   border-radius: 999px;
+   object-fit: cover;
+   box-shadow: 0 22px 60px rgba(15, 23, 42, 0.95);
+ }
+
+
+ .home-products {
+   padding: 70px 8vw 100px;
+   background-color: #020617;
+ }
+
+ .home-products-header {
+   max-width: 1200px;
+   margin: 0 auto 32px;
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   gap: 24px;
+ }
+
+ .home-products-tagline {
+   font-size: 14px;
+   text-transform: uppercase;
+   letter-spacing: 0.16em;
+   color: #a5b4fc;
+   margin-bottom: 8px;
+ }
+
+ .home-products-title {
+   font-size: 30px;
+   font-weight: 700;
+   margin: 0 0 6px;
+ }
+
+ .home-products-subtitle {
+   margin: 0;
+   font-size: 14px;
+   color: #9ca3af;
+ }
+
+ .home-products-viewall {
+   border-radius: 999px;
+   border: 1px solid #4f46e5;
+   padding: 10px 20px;
+   background-color: transparent;
+   color: #e5e7eb;
+   font-size: 14px;
+   cursor: pointer;
+   transition: background-color 0.15s ease, color 0.15s ease,
+     box-shadow 0.15s ease;
+ }
+
+ .home-products-viewall:hover {
+   background-color: #4f46e5;
+   color: #ffffff;
+   box-shadow: 0 12px 32px rgba(79, 70, 229, 0.55);
+ }
+
+ .home-products-loading {
+   max-width: 1200px;
+   margin: 0 auto;
+   font-size: 14px;
+   color: #9ca3af;
+ }
+
+
+
+ .home-products-grid {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   gap: 24px;
+ }
+
+ .home-product-card {
+   background-color: #020617;
+   border-radius: 24px;
+   padding: 18px 18px 16px;
+   box-shadow: 0 18px 50px rgba(15, 23, 42, 0.95);
+   display: flex;
+   flex-direction: column;
+   gap: 14px;
+ }
+
+ .home-product-image {
+   background-color: #0b1120;
+   border-radius: 18px;
+   padding: 22px;
+   height: 200px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .home-product-image img {
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: contain;
+ }
+
+ .home-product-body {
+   display: flex;
+   flex-direction: column;
+   gap: 6px;
+ }
+
+ .home-product-name {
+   font-size: 15px;
+   font-weight: 600;
+   margin: 0;
+ }
+
+ .home-product-category {
+   font-size: 12px;
+   text-transform: uppercase;
+   letter-spacing: 0.14em;
+   color: #9ca3af;
+   margin: 0 0 4px;
+ }
+
+ .home-product-footer {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 12px;
+   margin-top: 4px;
+ }
+
+ .home-product-value {
+   font-size: 13px;
+   color: #e5e7eb;
+ }
+
+ .home-product-btn {
+   border: none;
+   border-radius: 999px;
+   padding: 8px 16px;
+   font-size: 13px;
+   font-weight: 500;
+   background-color: #4f46e5;
+   color: #f9fafb;
+   cursor: pointer;
+   white-space: nowrap;
+   transition: background-color 0.15s ease, box-shadow 0.15s ease,
+     transform 0.15s ease;
+ }
+
+ .home-product-btn:hover {
+   background-color: #6366f1;
+   box-shadow: 0 10px 26px rgba(99, 102, 241, 0.6);
+   transform: translateY(-1px);
+ }
+
+
+ .home-pack {
+
+   padding: 110px 8vw 120px;
+   background-color: #020617;
+   border-top: 1px solid rgba(15, 23, 42, 0.9);
+ }
+
+ .home-pack-inner {
+   max-width: 1280px;
+   margin: 0 auto;
+   min-height: 440px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 80px;
+ }
+
+ .home-pack-image {
+   flex: 1.2;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ /* جلو خلفي حوالين الشنطة */
+ .home-pack-image::before {
+   content: "";
+   position: absolute;
+   inset: 15% 6%;
+   border-radius: 999px;
+   background:
+     radial-gradient(circle at 30% 0%, rgba(129, 140, 248, 0.95), transparent 55%),
+     radial-gradient(circle at 70% 100%, rgba(236, 72, 153, 0.9), transparent 60%);
+   opacity: 0.8;
+   filter: blur(24px);
+   z-index: -1;
+ }
+
+ .home-pack-img {
+   max-width: 640px;
+   width: 100%;
+   height: auto;
+   display: block;
+   filter: drop-shadow(0 35px 80px rgba(15, 23, 42, 0.9));
+   animation: floatPack 8s ease-in-out infinite;
+   transition: transform 0.35s ease, filter 0.35s ease;
+ }
+
+ /* تأثير عند الـ hover */
+ .home-pack-image:hover .home-pack-img {
+   transform: translateY(-8px) scale(1.04);
+   filter: drop-shadow(0 45px 95px rgba(15, 23, 42, 1));
+ }
+
+ .home-pack-text {
+   flex: 1;
+   max-width: 460px;
+ }
+
+ .home-pack-tagline {
+   font-size: 14px;
+   text-transform: uppercase;
+   letter-spacing: 0.16em;
+   color: #a5b4fc;
+   margin-bottom: 10px;
+ }
+
+ .home-pack-title {
+   font-size: 36px;
+   font-weight: 700;
+   margin: 0 0 16px;
+ }
+
+ .home-pack-description {
+   font-size: 15px;
+   line-height: 1.7;
+   color: #d1d5db;
+   margin: 0 0 18px;
+ }
+
+ .home-pack-list {
+   list-style: none;
+   padding: 0;
+   margin: 0 0 22px;
+   font-size: 14px;
+   color: #e5e7eb;
+ }
+
+ .home-pack-list li {
+   display: flex;
+   align-items: flex-start;
+   gap: 8px;
+   margin-bottom: 6px;
+ }
+
+ .home-pack-list i {
+   font-size: 18px;
+   color: #4f46e5;
+   margin-top: 1px;
+ }
+
+ .home-pack-btn {
+   border-radius: 999px;
+   border: none;
+   padding: 12px 28px;
+   font-size: 15px;
+   font-weight: 600;
+   background-color: #ffffff;
+   color: #020617;
+   cursor: pointer;
+   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+   transition: transform 0.15s ease, box-shadow 0.15s ease,
+     background-color 0.15s ease, color 0.15s ease;
+ }
+
+ .home-pack-btn:hover {
+   transform: translateY(-1px);
+   box-shadow: 0 24px 52px rgba(15, 23, 42, 1);
+ }
+
+
+
+ @keyframes floatPack {
+
+   0%,
+   100% {
+     transform: translateY(0);
+   }
+
+   50% {
+     transform: translateY(-10px);
+   }
+ }
+
+
+
+ @media (max-width: 992px) {
+   .home-hero {
+     padding: 100px 6vw 40px;
+     background:
+       linear-gradient(180deg,
+         #05070a 0%,
+         rgba(5, 7, 10, 0.94) 40%,
+         rgba(5, 7, 10, 0.9) 100%),
+       url("../img/ChatGPT Image Nov 24, 2025, 10_42_27 PM.png") center top / cover no-repeat;
+   }
+
+   .home-hero-title {
+     font-size: 40px;
+   }
+
+   .home-feature-strip {
+     flex-direction: column;
+     align-items: flex-start;
+     padding: 20px;
+   }
+
+   .home-feature-item {
+     justify-content: flex-start;
+   }
+
+   .home-about-inner {
+     flex-direction: column-reverse;
+     text-align: left;
+     padding: 40px 28px;
+   }
+
+   .home-about-text {
+     max-width: 100%;
+   }
+
+   .home-about-title {
+     font-size: 30px;
+   }
+
+   .home-about-img {
+     max-height: 300px;
+   }
+
+   .home-about {
+     padding: 50px 5vw 70px;
+   }
+
+   .home-products-header {
+     flex-direction: column;
+     align-items: flex-start;
+   }
+
+
+   .home-products-grid {
+     grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+
+
+   .home-pack-inner {
+     flex-direction: column;
+     text-align: left;
+     gap: 40px;
+   }
+
+   .home-pack-image {
+     justify-content: center;
+   }
+
+   .home-pack-img {
+     max-width: 500px;
+   }
+
+   .home-pack-title {
+     font-size: 30px;
+   }
+ }
+
+ @media (max-width: 640px) {
+   .home-about-inner {
+     padding: 32px 22px;
+   }
+
+   .home-about-title {
+     font-size: 26px;
+   }
+
+   .home-products {
+     padding: 50px 5vw 70px;
+   }
+
+
+   .home-products-grid {
+     grid-template-columns: 1fr;
+   }
+
+   .home-pack {
+     padding: 70px 5vw 80px;
+   }
+
+   .home-pack-inner {
+     gap: 28px;
+   }
+
+   .home-pack-title {
+     font-size: 26px;
+   }
+
+   .home-pack-img {
+     max-width: 420px;
+   }
+ }
