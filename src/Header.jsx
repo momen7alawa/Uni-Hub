@@ -51,7 +51,7 @@ const Header = () => {
     try {
       if (!allProducts.length) {
         setSearchLoading(true);
-        const res = await fetch("http://localhost:3001/items");
+        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/items`);
         if (!res.ok) throw new Error("Failed to load items");
         const raw = await res.json();
         const normalized = raw.map((item, idx) => normalizeItem(item, idx));
