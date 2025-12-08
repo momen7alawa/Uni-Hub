@@ -1,4 +1,4 @@
-// src/App.js
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import img1 from "./assets/photos/Team work-amico.png"
 import React from 'react';
 import Testimonials from "./components/Testimonials";
