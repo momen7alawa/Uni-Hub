@@ -115,7 +115,7 @@ const Header = () => {
   return (
     <>
       <header>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
           <div className="container">
             <Link className="navbar-brand d-flex align-items-center" to="/home">
               <img
