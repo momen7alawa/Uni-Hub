@@ -73,7 +73,7 @@ const Contact = () => {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.402676307465!2d30.556682475548756!3d30.051996818829233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458891e7dd20abb%3A0x4ef01430ac5d6f0d!2sFaculty%20of%20Home%20Economics%2C%20Menoufia%20University!5e0!3m2!1sen!2seg!4v1700850000000"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d662.2020112746038!2d31.008633667638616!3d30.575311912970882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1765230962974!5m2!1sen!2seg"
             ></iframe>
           </div>
 
