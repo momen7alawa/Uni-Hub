@@ -299,3 +299,83 @@
     height: 46px;
   }
 }
+
+@media (min-width: 992px) {
+  .navbar-nav.me-auto {
+    margin-left: auto; /* This centers the nav items better than fixed px */
+    margin-right: auto;
+  }
+}
+
+/* Mobile adjustments (Screens smaller than 992px) */
+@media (max-width: 991px) {
+  /* Reset margins so links align left on mobile */
+  .navbar-nav.me-auto {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 1rem;
+  }
+
+  /* Give the collapsible menu a background since the navbar is transparent */
+  .navbar-collapse {
+    background-color: rgba(2, 6, 23, 0.98); /* Matches your dark theme */
+    backdrop-filter: blur(12px);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 15px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Adjust spacing for links in the mobile menu */
+  .navbar-nav .nav-item {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Center the user/login section on mobile */
+  .navbar-nav.ms-auto {
+    margin-top: 1rem;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-nav.me-auto {
+    /* Keeps your original design on big screens */
+    margin-left: 450px; 
+    margin-right: auto;  
+  }
+}
+
+/* 2. Mobile Styles (Screens smaller than 992px) */
+@media (max-width: 991px) {
+  .navbar-nav.me-auto {
+    /* Resets margin so items stay INSIDE the screen borders */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left; /* Aligns text to the left */
+    padding-bottom: 10px;
+  }
+  
+  /* Adds a background so the menu is readable over your content */
+  .navbar-collapse {
+    background-color: #020617; /* Dark background matching your theme */
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  }
+
+  /* Fixes the "Search" and "User" section alignment on mobile */
+  .navbar-nav.ms-auto {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Separator line */
+    justify-content: flex-start; /* Aligns items to the start */
+  }
+}
+
