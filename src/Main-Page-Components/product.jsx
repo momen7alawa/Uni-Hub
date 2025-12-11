@@ -4,7 +4,6 @@ import ProductsSection from '../ProductsSection'
 import SingleProduct from '../SingleProduct'
 import { useLocation } from 'react-router-dom'
 
-// نفس فكرة normalize عشان نشغّل SingleProduct و ProductsSection على داتا db.json
 const normalizeItem = (item, index = 0) => {
   let imagePath = item.imageURL || item.image || ''
 
@@ -53,7 +52,6 @@ const ProductPage = () => {
         )
         setProducts(normalized)
 
-        // لو جاي من السيرش ومعاه product في state
         if (location.state?.product) {
           const fromNav = normalizeItem(location.state.product, 0)
           setSelectedProduct(fromNav)

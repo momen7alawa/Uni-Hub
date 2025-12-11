@@ -1,4 +1,3 @@
-// src/Notifications.jsx
 import React, { useState, useEffect } from "react";
 import { useAuth } from "./AuthContext";
 import { Link } from "react-router-dom";
@@ -8,13 +7,11 @@ const Notifications = () => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch messages meant for the current user
   useEffect(() => {
     if (user) {
       fetch(`${import.meta.env.VITE_API_BASE_URL}/exchangeMessages?owner=${encodeURIComponent(user.username)}`)
         .then((res) => res.json())
         .then((data) => {
-          // Sort by newest first
           const sorted = data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
           setMessages(sorted);
           setLoading(false);

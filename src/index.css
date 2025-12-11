@@ -26,7 +26,6 @@
   backdrop-filter: blur(12px);
 }
 
-/* لينكات الناف بار */
 .navbar-dark .navbar-nav .nav-link {
   color: #d1d5db;
   font-weight: 500;
@@ -38,7 +37,6 @@
   color: #ffffff;
 }
 
-/* "Log in" على اليمين */
 .navbar-dark .navbar-nav.ms-auto .nav-link {
   color: #f9fafb;
 }
@@ -47,7 +45,6 @@
   color: #ffffff;
 }
 
-/* زرار أيقونة السيرش في الناف بار */
 .nav-icon-btn {
   border: none;
   background: transparent;
@@ -66,22 +63,18 @@
   transform: translateY(-1px);
 }
 
-/* ================= SEARCH OVERLAY ================= */
-
 .search-overlay {
   position: fixed;
   inset: 0;
   z-index: 1050;
   background: rgba(2, 6, 23, 0.96);
   display: flex;
-  flex-direction: column;      /* نخلي العناصر تحت بعض */
-  align-items: center;         /* في نص الشاشة أفقياً */
-  justify-content: flex-start; /* من فوق مش في النص */
-  padding-top: 120px;          /* مسافة من فوق بعد الـ navbar */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 120px;
 }
 
-
-/* زرار X في الزاوية اليمين فوق */
 .search-overlay-close {
   position: absolute;
   top: 20px;
@@ -104,18 +97,15 @@
   transform: translateY(-1px);
 }
 
-/* الفورم نفسه */
 .search-overlay-form {
   width: 90%;
   max-width: 720px;
   display: flex;
   align-items: center;
   gap: 18px;
-  margin-bottom: 32px; /* مسافة بين السيرش والنتايج */
+  margin-bottom: 32px;
 }
 
-
-/* input كبير تحتُه خط */
 .search-overlay-input {
   flex: 1;
   background: transparent;
@@ -131,7 +121,6 @@
   color: #9ca3af;
 }
 
-/* زرار السيرش الدايرة بنفسجي */
 .search-overlay-button {
   width: 52px;
   height: 52px;
@@ -153,7 +142,6 @@
   transform: translateY(-1px);
   box-shadow: 0 24px 55px rgba(79, 70, 229, 0.85);
 }
-/* ===== Search results layout ===== */
 
 .search-results {
   margin: 2rem auto 0;
@@ -230,7 +218,6 @@
   margin: 0.15rem 0 0;
 }
 
-/* رسالة "no results" أو "loading" */
 .search-no-results,
 .search-loading {
   margin-top: 2rem;
@@ -239,47 +226,39 @@
   font-size: 0.9rem;
 }
 
-
-/* حجم لوجو الفوتر */
 .footer-logo {
   width: 80px;
 }
 
-/* الفوتر كله */
 .unihub-footer {
-  background-color: #020617; /* نفس لون الخلفية الغامقة بتاعت الموقع */
+  background-color: #020617;
   color: #f9fafb;
 }
 
-/* نخلي الفوتر أطول (زي التيمبليت) */
 .unihub-footer .container {
-  padding-top: 3.5rem;  /* حوالي 56px */
-  padding-bottom: 3rem; /* حوالي 48px */
+  padding-top: 3.5rem;
+  padding-bottom: 3rem;
 }
 
-/* ليست الخدمات */
 .footer-list li {
   margin-bottom: 0.4rem;
   color: #d1d5db;
   font-size: 0.95rem;
 }
 
-/* الخط الفاصل */
 .footer-separator {
   border-color: rgba(148, 163, 184, 0.3);
 }
 
-/* لينكات السوشيال ميديا */
 .unihub-footer a {
   transition: color 0.15s ease, transform 0.15s ease;
 }
 
 .unihub-footer a:hover {
-  color: #6366f1; /* بنفسجي الموقع */
+  color: #6366f1;
   transform: translateY(-1px);
 }
 
-/* على الشاشات الصغيرة خلي النص في النص */
 @media (max-width: 768px) {
   .unihub-footer .container {
     padding-top: 2.5rem;
@@ -287,8 +266,6 @@
   }
 }
 
-
-/* موبايل: صغّر الخط شوية */
 @media (max-width: 640px) {
   .search-overlay-input {
     font-size: 20px;
@@ -297,5 +274,74 @@
   .search-overlay-button {
     width: 46px;
     height: 46px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-nav.me-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-nav.me-auto {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 1rem;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(2, 6, 23, 0.98);
+    backdrop-filter: blur(12px);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 15px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar-nav .nav-item {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-nav.ms-auto {
+    margin-top: 1rem;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-nav.me-auto {
+    margin-left: 450px; 
+    margin-right: auto;  
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-nav.me-auto {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+  
+  .navbar-collapse {
+    background-color: #020617;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  }
+
+  .navbar-nav.ms-auto {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: flex-start;
   }
 }

@@ -1,4 +1,3 @@
-// src/components/PageTitle.js
 import React from 'react';
 
 const Pagetitle = () => {

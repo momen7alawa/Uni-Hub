@@ -1,4 +1,4 @@
-// src/App.js
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import img1 from "./assets/photos/Team work-amico.png"
 import React from 'react';
 import Testimonials from "./components/Testimonials";
@@ -39,7 +39,7 @@ const App = () => {
                 "Do you have books, gadgets, or university supplies you no longer need? Our platform connects students directly, facilitating the exchange of old items and giving them a second life. Join our community to save money, support sustainability, and easily find everything you need for the academic year from your peers. Start exchanging now and be part of the solution!"
               </p>
             </div> <div className="cta-group text-center">
-              <Link to="/product" className="btn btn-primary">Exchange Now</Link> {/* تم تغيير /products إلى /product */}
+              <Link to="/product" className="btn btn-primary">Exchange Now</Link>
               <Link to="/contact" className="btn btn-primary">Contact Us</Link>
             </div>
 

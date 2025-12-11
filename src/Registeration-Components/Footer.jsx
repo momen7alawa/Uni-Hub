@@ -1,12 +1,8 @@
-// src/Registeration-Components/Footer.jsx
-
 const Footer = () => {
   return (
     <footer className="unihub-footer mt-5">
       <div className="container py-5">
-        {/* الجزء العلوي من الفوتر */}
         <div className="row text-center text-md-start text-white g-4">
-          {/* اللوجو + سطر بسيط */}
           <div className="col-12 col-md-4">
             <img className="footer-logo mb-3" src="/assets/logo.svg" alt="UNIHub logo" />
             <h5 className="text-white mb-2">“Tools in, Stress out”</h5>
@@ -15,7 +11,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Services */}
           <div className="col-12 col-md-4">
             <h5 className="mb-3">Services</h5>
             <ul className="list-unstyled footer-list">
@@ -27,7 +22,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
           <div className="col-12 col-md-4">
             <h5 className="mb-3">Contact</h5>
             <p className="mb-1">
@@ -40,13 +34,11 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* خط فاصل */}
         <hr className="footer-separator my-4" />
 
-        {/* الجزء السفلي: حقوق + سوشيال ميديا */}
         <div className="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
           <p className="mb-0 small text-light">
-            © 2024 UNIHub. All rights reserved.
+            © 2025 UNIHub. All rights reserved.
           </p>
 
           <div className="d-flex align-items-center gap-3 fs-5">

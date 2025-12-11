@@ -1,4 +1,3 @@
- // src/Main-Page-Components/Home.jsx
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/Home.css';
@@ -7,7 +6,6 @@ import backpackImage from '../img/ChatGPT Image Nov 26, 2025, 01_08_05 AM.png';
 import ProductsSection from '../ProductsSection';
 import SingleProduct from '../SingleProduct';
 
-// دالة لتوحيد شكل الداتا الجاية من json-server
 const normalizeItem = (item, index = 0) => {
   let imagePath = item.imageURL || item.image || '';
 
@@ -78,7 +76,6 @@ const Home = () => {
         />
       ) : (
         <>
-          {/* ================= HERO SECTION ================= */}
           <section className="home-hero">
             <div className="home-hero-inner">
               <p className="home-hero-tagline">Campus tools exchange</p>
@@ -93,7 +90,6 @@ const Home = () => {
                 the tools you need.
               </p>
               <div className="home-hero-actions">
-                {/* زرار يذهب مباشرة لصفحة /product */}
                 <button
                   className="home-hero-btn"
                   onClick={() => navigate('/product')}
@@ -103,9 +99,7 @@ const Home = () => {
               </div>
             </div>
 
-            {/* ================= FEATURE STRIP ================= */}
             <div className="home-feature-strip">
-              {/* ... كل feature items كما هي ... */}
               <div className="home-feature-item">
                 <div className="home-feature-icon">
                   <i className="bi bi-arrow-left-right"></i>
@@ -153,7 +147,6 @@ const Home = () => {
             </div>
           </section>
 
-          {/* ================= ABOUT SECTION ================= */}
           <section className="home-about" id="about">
             <div className="home-about-inner">
               <div className="home-about-text">
@@ -206,7 +199,6 @@ const Home = () => {
             </div>
           </section>
 
-          {/* ================= FEATURED PRODUCTS SECTION ================= */}
           <section id="products" className="home-products-section">
             <ProductsSection
               products={products}
@@ -215,7 +207,6 @@ const Home = () => {
             />
           </section>
 
-          {/* ================= STUDY BACKPACK HIGHLIGHT ================= */}
           <section className="home-pack">
             <div className="home-pack-inner">
               <div className="home-pack-image">
@@ -249,7 +240,6 @@ const Home = () => {
                   </li>
                 </ul>
 
-                {/* زرار يذهب مباشرة لصفحة /product */}
                 <button
                   className="home-pack-btn"
                   onClick={() => navigate('/product')}

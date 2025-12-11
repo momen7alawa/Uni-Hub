@@ -1,7 +1,5 @@
-// src/components/TeamGrid.js
 import React from 'react';
 
-// يمكن تخزين بيانات الفريق هنا أو استيرادها من ملف بيانات خارجي
 const teamMembers = [
    
     { name: "Momen Hesham", role: "Founder & Leader", desc: " Visionary front-end developer leading the team with creativity and dedication", bgClass: "hover-card" },

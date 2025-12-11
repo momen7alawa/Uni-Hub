@@ -33,7 +33,7 @@ const AddTool = () => {
         description: '',
         category: 'Tools',
         owner: user ? user.username : 'Current User',
-        imageBase64: '' // We will store the actual image data here
+        imageBase64: '' 
     });
     const [submissionStatus, setSubmissionStatus] = useState(null);
     const navigate = useNavigate();
@@ -45,12 +45,9 @@ const AddTool = () => {
         if (name === 'imageFile') {
             const file = files[0];
             if (file) {
-                // Convert the file to Base64 text immediately
                 const reader = new FileReader();
                 reader.onloadend = () => {
-                    // Set preview
                     setPreview(reader.result);
-                    // Save the base64 string to our state to send to db.json
                     setToolData(prev => ({ ...prev, imageBase64: reader.result }));
                 };
                 reader.readAsDataURL(file);
@@ -68,15 +65,12 @@ const AddTool = () => {
         setSubmissionStatus('loading');
 
         try {
-            // Prepare JSON Payload
-            // We send the "imageBase64" string as the imageURL.
-            // This works because <img src="..."> can read Base64 strings.
             const payload = {
                 title: toolData.title,
                 description: toolData.description,
                 class: toolData.category, 
                 owner: toolData.owner,
-                imageURL: toolData.imageBase64, // Sending the image data directly
+                imageURL: toolData.imageBase64,
                 price: 0, 
                 createdAt: new Date().toISOString()
             };
@@ -108,7 +102,6 @@ const AddTool = () => {
             <div className="ct-container" style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
                 <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '20px' }}>
                     
-                    {/* Tool Name */}
                     <div>
                         <label htmlFor="title" style={{ fontWeight: 'bold', color: '#fff' }}>Tool Name *</label>
                         <input
@@ -122,7 +115,6 @@ const AddTool = () => {
                         />
                     </div>
 
-                    {/* Description */}
                     <div>
                         <label htmlFor="description" style={{ fontWeight: 'bold', color: '#fff' }}>Description *</label>
                         <textarea
@@ -136,7 +128,6 @@ const AddTool = () => {
                         />
                     </div>
 
-                    {/* Category */}
                     <div>
                         <label htmlFor="category" style={{ fontWeight: 'bold', color: '#fff' }}>Category</label>
                         <select
@@ -154,7 +145,6 @@ const AddTool = () => {
                         </select>
                     </div>
 
-                    {/* Image Upload */}
                     <div>
                         <label style={{ fontWeight: 'bold', color: '#fff' }}>Upload Image</label>
                         <div 

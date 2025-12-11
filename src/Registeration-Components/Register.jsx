@@ -1,4 +1,3 @@
-// src/Registeration-Components/Register.jsx
 import React, { useState } from 'react'
 import '../css/Login.css'
 import { FaUser, FaLock, FaEnvelope } from 'react-icons/fa'
@@ -18,34 +17,28 @@ const Register = () => {
 
   const navigate = useNavigate()
 
-  // 🆕 Validation Helper
   const validateInputs = () => {
-    // 1. Check Empty Fields
     if (!firstName || !lastName || !email || !password || !confirmPassword) {
       setError('Please fill in all fields.')
       return false
     }
 
-    // 2. Validate Email Format (Regex)
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
       setError('Please enter a valid email address.')
       return false
     }
 
-    // 3. Password Strength (Min 6 chars)
     if (password.length < 6) {
       setError('Password must be at least 6 characters long.')
       return false
     }
 
-    // 4. Confirm Password
     if (password !== confirmPassword) {
       setError('Passwords do not match.')
       return false
     }
 
-    // 5. Terms
     if (!acceptTerms) {
       setError('You must accept the terms & conditions.')
       return false
@@ -59,13 +52,11 @@ const Register = () => {
     setError('')
     setSuccess('')
 
-    // Run Validation
     if (!validateInputs()) return
 
     setLoading(true) // Start loading
 
     try {
-      // 1️⃣ Check if email already exists
       const checkRes = await fetch(
         `${import.meta.env.VITE_API_BASE_URL}/accounts?email=${encodeURIComponent(email)}`
       )
@@ -77,7 +68,6 @@ const Register = () => {
         return
       }
 
-      // 2️⃣ Create new user
       const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/accounts`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -96,7 +86,6 @@ const Register = () => {
 
       setSuccess('Account created successfully! Redirecting...')
 
-      // Clear form
       setFirstName('')
       setLastName('')
       setEmail('')
@@ -104,7 +93,6 @@ const Register = () => {
       setConfirmPassword('')
       setAcceptTerms(false)
 
-      // Redirect after 1.5 seconds
       setTimeout(() => {
         navigate('/login')
       }, 1500)
@@ -187,7 +175,6 @@ const Register = () => {
             </label>
           </div>
 
-          {/* Disable button while loading */}
           <button type="submit" className="login-btn" disabled={loading}>
             {loading ? 'Creating Account...' : 'Create Account'}
           </button>

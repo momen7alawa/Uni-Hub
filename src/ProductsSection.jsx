@@ -1,4 +1,3 @@
- // src/Main-Page-Components/ProductsSection.jsx
 import React from "react";
 
 const shortenTitle = (title, max = 40) =>

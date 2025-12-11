@@ -1,17 +1,13 @@
-// src/main.jsx
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./Main-Page-Components/About.css";
 import AddTool from "./AddTool";
 import Notifications from "./Notifications";
-// styling
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-// icons
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-// react router
 import {
   BrowserRouter,
   Route,
@@ -22,22 +18,16 @@ import {
 
 import "./Main-Page-Components/product.css";
 
-// Auth
 import { AuthProvider, useAuth } from "./AuthContext";
 
-// Main-Page-Components
 import Header from "./Header";
 import Footer from "./Registeration-Components/Footer";
 import Home from "./Main-Page-Components/Home";
 import About from "./Main-Page-Components/About";
 import Contact from "./Main-Page-Components/Contact";
 import product from "./Main-Page-Components/product";
-
-// Registration-Components
 import Login from "./Registeration-Components/Login";
 import Register from "./Registeration-Components/Register";
-
-// صفحة التبادل
 import ExchangePage from "./ExchangePage";
 
 const ProtectedRoute = ({ children }) => {

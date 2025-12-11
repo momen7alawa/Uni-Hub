@@ -1,4 +1,3 @@
-// src/Main-Page-Components/ProductList.jsx
 import React, { useEffect, useState, useMemo } from "react";
 import ProductsSection from "../ProductsSection";
 import PageTitle from "../Pagetitle";
@@ -11,7 +10,6 @@ const ProductList = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        // 🔴 هنا ربطنا React بالـ json-server
         const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/items`);
         if (!res.ok) {
           throw new Error("Failed to fetch items from json-server");
@@ -28,16 +26,13 @@ const ProductList = () => {
     fetchProducts();
   }, []);
 
-  // ⬅️ منطق الفرز (Sorting Logic)
   const sortedProducts = useMemo(() => {
     if (!products.length) return [];
 
-    // نشتغل على نسخة من المصفوفة عشان ما نعدّلش الـ state مباشرة
     const sortableProducts = [...products];
 
     switch (sortType) {
       case "price_asc":
-        // لو حابب تستخدم price بعدين، الكود جاهز
         return sortableProducts.sort(
           (a, b) => (a.price || 0) - (b.price || 0)
         );
@@ -46,26 +41,21 @@ const ProductList = () => {
           (a, b) => (b.price || 0) - (a.price || 0)
         );
       case "name_asc":
-        // الفرز حسب الاسم A → Z
         return sortableProducts.sort((a, b) =>
           a.title.localeCompare(b.title)
         );
       case "name_desc":
-        // الفرز حسب الاسم Z → A
         return sortableProducts.sort((a, b) =>
           b.title.localeCompare(a.title)
         );
       default:
-        // بدون فرز: رجّع اللي طالع من الـ API زي ما هو
         return products;
     }
   }, [products, sortType]);
 
   return (
     <main className="product-page">
-      {/* الجزء اللي فوق: العنوان + خيارات الفرز */}
       <div className="top-section-controls">
-        {/* لو PageTitle محتاج props زي title ابعتها، لو لأ سيبه زي ما هو */}
         <PageTitle title="Available Tools" />
 
         <div className="sort-options">
@@ -84,7 +74,6 @@ const ProductList = () => {
         </div>
       </div>
 
-      {/* تمرير قائمة المنتجات بعد الفرز */}
       <ProductsSection
         products={sortedProducts}
         loading={loading}

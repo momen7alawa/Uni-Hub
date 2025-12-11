@@ -1,8 +1,6 @@
-// src/Header.jsx
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "./img/1.png"; 
-// 1. Import the Auth Hook
 import { useAuth } from "./AuthContext";
 
 const normalizeItem = (item, index = 0) => {
@@ -41,7 +39,6 @@ const Header = () => {
 
   const navigate = useNavigate();
   
-  // 2. Get user and logout function from Context
   const { user, logout } = useAuth();
 
   const openSearch = async () => {
@@ -51,7 +48,7 @@ const Header = () => {
     try {
       if (!allProducts.length) {
         setSearchLoading(true);
-        const res = await fetch("http://localhost:3001/items");
+        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/items`);
         if (!res.ok) throw new Error("Failed to load items");
         const raw = await res.json();
         const normalized = raw.map((item, idx) => normalizeItem(item, idx));
@@ -106,7 +103,6 @@ const Header = () => {
     setSearchResults([]);
   };
 
-  // 3. Handle Logout Click
   const handleLogout = () => {
     logout();
     navigate("/login"); // Redirect to login page after logout
@@ -165,7 +161,6 @@ const Header = () => {
                   <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
 
-                {/* 4. Conditional Rendering for User vs Login */}
                 {user ? (
                           <div className="nav-item dropdown">
                             <a 
@@ -188,7 +183,6 @@ const Header = () => {
                               </li>
                               <li><hr className="dropdown-divider bg-secondary" /></li>
                               
-                              {/* NEW LINK HERE */}
                               <li>
                                 <Link className="dropdown-item text-light" to="/notifications">
                                   <i className="bi bi-envelope me-2"></i>
@@ -220,7 +214,6 @@ const Header = () => {
         </nav>
       </header>
 
-      {/* SEARCH OVERLAY (No Changes Here) */}
       {isSearchOpen && (
         <div className="search-overlay">
           <button

@@ -1,11 +1,9 @@
-// src/RelatedProducts.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const RelatedProducts = ({ products = [] }) => {
   const navigate = useNavigate();
 
-  // لما أضغط على أي منتج من اللي تحت
   const handleClick = (product) => {
     navigate("/product", { state: { product } });
   };

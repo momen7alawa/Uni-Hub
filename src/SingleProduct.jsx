@@ -4,11 +4,6 @@ import RelatedProducts from "./RelatedProducts";
 
 const SingleProduct = ({ product, relatedProducts = [], onSelectProduct, onBack }) => {
   const [tab, setTab] = useState("description");
-  
-  // 1. Removed quantity state
-  // const [quantity, setQuantity] = useState(1); ❌
-
-  // Review States
   const [rating, setRating] = useState(0);
   const [reviews, setReviews] = useState([]);
   const [reviewForm, setReviewForm] = useState({
@@ -19,7 +14,6 @@ const SingleProduct = ({ product, relatedProducts = [], onSelectProduct, onBack 
   
   const navigate = useNavigate();
 
-  // Scroll Logic
   useLayoutEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     document.documentElement.scrollTo({ top: 0, left: 0, behavior: 'instant' });
@@ -31,7 +25,6 @@ const SingleProduct = ({ product, relatedProducts = [], onSelectProduct, onBack 
     return () => clearTimeout(timer);
   }, [product]);
 
-  // Fetch Reviews Logic
   useEffect(() => {
     const fetchReviews = async () => {
       try {
@@ -50,7 +43,6 @@ const SingleProduct = ({ product, relatedProducts = [], onSelectProduct, onBack 
     }
   }, [product]);
 
-  // Submit Review Logic
   const handleReviewSubmit = async (e) => {
     e.preventDefault();
 
@@ -154,8 +146,6 @@ const SingleProduct = ({ product, relatedProducts = [], onSelectProduct, onBack 
           </div>
 
           <div className="cart">
-            {/* 2. Removed the .quantity div and buttons here */}
-
             <button onClick={handleExchange} className="single-product-add-btn">
               Exchange
             </button>

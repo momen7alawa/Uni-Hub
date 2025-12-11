@@ -1,4 +1,3 @@
-// src/ExchangePage.jsx
 import React, { useState, useEffect } from "react";
 import { useParams, useLocation, Link, useNavigate } from "react-router-dom";
 import { useAuth } from "./AuthContext";
@@ -11,7 +10,6 @@ const ExchangePage = () => {
 
   const productFromState = location.state || {};
 
-  // Initialize with logged-in user data
   const [senderName, setSenderName] = useState(user?.username || "");
   const [senderEmail, setSenderEmail] = useState(user?.email || "");
   const [meetingPlace, setMeetingPlace] = useState("");
@@ -27,16 +25,13 @@ const ExchangePage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // 1. Create the message object
     const payload = {
       productId: productFromState.productId || itemId,
       productTitle: productFromState.title || "Unknown Tool",
       productImage: productFromState.image || "",
       
-      // The person receiving the message (The Tool Owner)
       owner: productFromState.owner, 
       
-      // The person sending the message (Current User)
       senderName,
       senderEmail,
       
@@ -47,7 +42,6 @@ const ExchangePage = () => {
     };
 
     try {
-      // 2. Save directly to db.json
       const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/exchangeMessages`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -73,7 +67,6 @@ const ExchangePage = () => {
       </div>
 
       <div className="exchange-layout">
-        {/* Left Side: Product Info */}
         <aside className="exchange-product-card">
           {productFromState.image && (
             <img src={productFromState.image} alt={productFromState.title} className="exchange-product-image" />
@@ -82,7 +75,6 @@ const ExchangePage = () => {
           <Link to="/product" className="exchange-back-link">← Back to products</Link>
         </aside>
 
-        {/* Right Side: Simple Form */}
         <section className="exchange-form-wrapper">
           <form className="exchange-form" onSubmit={handleSubmit}>
             <div className="form-row">

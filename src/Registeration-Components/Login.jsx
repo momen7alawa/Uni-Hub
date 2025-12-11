@@ -1,4 +1,3 @@
-// src/Registeration-Components/Login.jsx
 import React, { useState } from 'react';
 import '../css/Login.css';
 import { FaUser, FaLock } from 'react-icons/fa';
@@ -29,13 +28,11 @@ const Login = () => {
     setLoading(true);
 
     try {
-      // 1. First, search ONLY by email to see if the user exists
       const res = await fetch(
         `${import.meta.env.VITE_API_BASE_URL}/accounts?email=${encodeURIComponent(email)}`
       );
       const users = await res.json();
 
-      // 2. Check if user exists
       if (users.length === 0) {
         setError('No account found with this email. Please register first.');
         setLoading(false);
@@ -44,15 +41,12 @@ const Login = () => {
 
       const user = users[0];
 
-      // 3. Check if password matches
-      // Note: In a real app, passwords would be hashed. Here we compare strings.
       if (user.password !== password) {
         setError('Incorrect password. Please try again.');
         setLoading(false);
         return;
       }
 
-      // 4. If we get here, Login is successful
       login({
         id: user.id,
         username: user.username,
@@ -79,7 +73,6 @@ const Login = () => {
         <form className="login-form" onSubmit={handleSubmit}>
           <h2 className="login-title">Login</h2>
 
-          {/* Error Message Display */}
           {error && (
             <div 
               style={{ 

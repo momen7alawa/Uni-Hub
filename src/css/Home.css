@@ -215,17 +215,16 @@
     text-decoration: none;
     cursor: pointer;
     background-color: #facc15;
-    color: #022c22 !important;  /* اللون الأساسي أسود */
+    color: #022c22 !important;
     box-shadow: 0 18px 40px rgba(250, 204, 21, 0.55);
     transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
-    /* لاحظي: حذفت transition على color */
 }
 
 .home-about-btn:hover {
    transform: translateY(-1px);
    background-color: #eab308;
    box-shadow: 0 22px 48px rgba(250, 204, 21, 0.7);
-   color: #022c22 !important;  /* اللون أسود ثابت */
+   color: #022c22 !important;
 }
 
  .home-about-image {
@@ -429,7 +428,6 @@
    justify-content: center;
  }
 
- /* جلو خلفي حوالين الشنطة */
  .home-pack-image::before {
    content: "";
    position: absolute;
@@ -453,7 +451,6 @@
    transition: transform 0.35s ease, filter 0.35s ease;
  }
 
- /* تأثير عند الـ hover */
  .home-pack-image:hover .home-pack-img {
    transform: translateY(-8px) scale(1.04);
    filter: drop-shadow(0 45px 95px rgba(15, 23, 42, 1));
