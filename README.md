@@ -37,6 +37,9 @@ UNIHub is a peer-to-peer exchange platform designed specifically for university 
 ### Backend
 - **JSON Server 0.17.4**: RESTful API with JSON database (includes built-in CORS)
 - **Node.js**: Server runtime
+- **Nodemailer 7.0.11**: Email notification system
+- **CORS 2.8.5**: Cross-origin resource sharing
+>>>>>>> 774bdcf05bf5b624e8da2dcb75c2143f4cbd0623
 
 ### Development Tools
 - **ESLint**: Code linting and quality
@@ -52,9 +55,15 @@ graduatin_project/
 │   │   └── logo.svg
 │   └── images/              # Product images
 ├── src/
+<<<<<<< HEAD
 │   ├── components/          # Reusable UI components (PageTitle, StatsCounter, TeamGrid, Testimonials)
 │   ├── css/                 # Stylesheets (Home.css, Login.css, Contact.css)
 │   ├── img/                 # Static images and backgrounds
+=======
+│   ├── components/          # Reusable UI components
+│   ├── css/                 # Stylesheets
+│   ├── img/                 # Static images
+>>>>>>> 774bdcf05bf5b624e8da2dcb75c2143f4cbd0623
 │   ├── Main-Page-Components/
 │   ├── Registeration-Components/
 │   ├── AddTool.jsx          # Tool listing form
@@ -98,8 +107,19 @@ graduatin_project/
    VITE_API_BASE_URL=http://localhost:3001
    ```
 
+<<<<<<< HEAD
 4. **Email functionality**
    Email replies work through mailto links that open the user's default email client. No server-side email configuration required.
+=======
+4. **Configure email service** (Optional)
+   Edit `server.js` and update the email credentials:
+   ```javascript
+   auth: {
+       user: 'YOUR_EMAIL@gmail.com',
+       pass: 'YOUR_APP_PASSWORD'
+   }
+   ```
+>>>>>>> 774bdcf05bf5b624e8da2dcb75c2143f4cbd0623
 
 ## Running the Application
 
@@ -152,6 +172,7 @@ npm run preview
 - `GET /exchangeMessages?owner=<username>` - Filter by recipient
 - `POST /exchangeMessages` - Send exchange request
 
+<<<<<<< HEAD
 ### Image Handling
 - Images are handled client-side using Base64 encoding
 - No server-side file upload endpoints needed
@@ -159,6 +180,13 @@ npm run preview
 ### Email Integration
 - Email functionality uses mailto links (client-side)
 - No server-side email endpoints needed
+=======
+### File Upload
+- `POST /upload` - Upload image file
+
+### Email
+- `POST /send-email` - Send email notification
+>>>>>>> 774bdcf05bf5b624e8da2dcb75c2143f4cbd0623
 
 ## Database Schema
 
@@ -214,15 +242,25 @@ npm run preview
 - Persistent login across page refreshes
 
 ### Tool Listing
+<<<<<<< HEAD
 - Base64 image encoding for direct storage in JSON (no file server needed)
+=======
+- Base64 image encoding for direct storage in JSON
+>>>>>>> 774bdcf05bf5b624e8da2dcb75c2143f4cbd0623
 - Category-based organization
 - Owner attribution for each listing
 - Timestamp tracking
 
 ### Exchange System
+<<<<<<< HEAD
 - Direct messaging between users (stored in JSON database)
 - Meeting place suggestions
 - Email integration via mailto links (opens user's email client)
+=======
+- Direct messaging between users
+- Meeting place suggestions
+- Email integration for follow-up
+>>>>>>> 774bdcf05bf5b624e8da2dcb75c2143f4cbd0623
 - Inbox notification system
 
 ## Categories
@@ -232,6 +270,7 @@ npm run preview
 - **Electrical**: Arduino boards, breadboards, resistors, multimeters, jumper wires
 - **Lab Kits**: General laboratory equipment and supplies
 
+<<<<<<< HEAD
 ## Architecture Highlights
 
 ### Simplified Backend
@@ -246,6 +285,8 @@ npm run preview
 - **Easy deployment**: Single server file with embedded database
 - **Client-side heavy**: Most functionality handled in React frontend
 
+=======
+>>>>>>> 774bdcf05bf5b624e8da2dcb75c2143f4cbd0623
 ## Security Considerations
 
 ⚠️ **Important**: This is a development/educational project. For production use:
@@ -284,6 +325,7 @@ Please check with the project owner for licensing information.
 
 For questions or support, please contact the project maintainers.
 
+<<<<<<< HEAD
 ## Recent Updates
 
 ### Code Cleanup (Latest)
@@ -301,6 +343,8 @@ For questions or support, please contact the project maintainers.
 - ✅ Better maintainability (less unused code)
 - ✅ Same user experience with cleaner backend
 
+=======
+>>>>>>> 774bdcf05bf5b624e8da2dcb75c2143f4cbd0623
 ## Acknowledgments
 
 - Built as a graduation project
